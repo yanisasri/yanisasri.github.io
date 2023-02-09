@@ -44,6 +44,7 @@
     top: 80px;
     border-right: #EFEFEF 1px solid;
     color: #707070;
+    text-align: center;
 }
 
 .sideinfo img {
@@ -67,10 +68,7 @@
 }
 
 .sideinfo a {
-    margin-left: auto;
-    margin-right: auto;
     display: block;
-    width: 40%;
 }
 
 .info {
@@ -182,4 +180,10 @@
     .info table, details {
         line-height: 100%;
     }
+}
+
+@media only screen and (max-width: 400px) {
+  .info {
+    margin-top: 89%;
+  }
 }
