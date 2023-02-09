@@ -8,6 +8,8 @@
     top: 0;
     padding: 10px;
     height: 40px;
+    margin-top: 5px;
+    position: fixed;
  }
 
  .topnav a {
@@ -39,7 +41,6 @@
     background-color: white;
     padding-top: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    position: absolute;
     top: 80px;
     border-right: #EFEFEF 1px solid;
     color: #707070;
@@ -68,9 +69,8 @@
 .sideinfo a {
     margin-left: auto;
     margin-right: auto;
-    border-radius: 50%;
     display: block;
-    width: 50%;
+    width: 40%;
 }
 
 .info {
@@ -79,7 +79,9 @@
     flex-direction: column;
     overflow: auto;
     margin-left: 400px;
+    margin-top: 50px;
     font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 30px;
 }
 
 .info h3 {
@@ -109,7 +111,7 @@
 .info table, details {
   font-size: 14px;
   font-weight: lighter;
-  line-height: 70%;
+  line-height: 100%;
   width: 60%
 }
 
@@ -136,12 +138,47 @@
   text-align: center;
 }
 
-div#content {
-    padding: 30px;
+@media only screen and (max-width: 850px) {
+    .info {
+        line-height: 100%;
+    }
+    .info table, details {
+        width: 100%;
+    }
 }
 
-@media only screen and (max-width: 800px) {
-  div#content {
-    padding: 10px;
-  }
+@media only screen and (max-width: 600px) {
+    .info {
+        text-align: center;
+        line-height: 100%;
+        padding: 10px;
+        display: flex;
+        overflow: auto;
+        margin-top: 70%;
+        margin-left: 10px;
+        padding-bottom: 70px;
+    }
+    .info progress {
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 26px;
+      }
+    .sideinfo {
+        height: 45%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0.5em;
+        width: 100%; 
+        position: fixed; 
+        border-bottom: #EFEFEF 1px solid;
+    }
+    .sideinfo img {
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .info table, details {
+        line-height: 100%;
+    }
 }
